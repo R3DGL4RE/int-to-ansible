@@ -9,8 +9,8 @@
      ios_config:
        parents: ip access-list extended REQ2
        lines:
-         - 10 permit icmp 192.168.20.20 192.168.10.10 echo-reply
-         - 20 permit icmp 192.168.20.20 any echo-reply
+         - 10 permit icmp 192.168.20.20 192.168.10.10
+         - 20 permit icmp 192.168.20.20 any
          - 30 deny icmp any any echo-reply
          - 40 permit tcp any any
                   
