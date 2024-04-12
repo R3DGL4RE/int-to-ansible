@@ -1,5 +1,5 @@
 ---
-- name: Configure standard ACL
+- name: Configure extended ACL
   hosts: R1
   gather_facts: false
   connection: network_cli
@@ -10,7 +10,7 @@
        parents: ip access-list extended REQ2
        lines:
          - 10 permit icmp 192.168.20.20 0.0.0.0 192.168.10.10 0.0.0.0
-         - 21 permit icmp 192.168.20.20 0.0.0.0 any echo-reply
+         - 21 permit icmp host 192.168.20.20 any echo-reply
          - 30 deny icmp any any
          - 40 permit ip any any
                   
